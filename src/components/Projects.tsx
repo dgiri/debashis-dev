@@ -4,6 +4,8 @@ import tiatrosMImg from '@/assets/tiatros-m.png';
 import tiatrosLtsImg from '@/assets/tiatros-lts.png';
 import tiatros1Img from '@/assets/tiatros-1.png';
 import solaroImg from '@/assets/solaro.png';
+import { Button } from './ui/button';
+import { Link } from 'react-router-dom';
 
 interface ProjectsProps {
   limit?: number;
@@ -80,7 +82,7 @@ const Projects = ({ limit, showHeading = true }: ProjectsProps) => {
   const displayedProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <div className="py-16 px-4 container mx-auto">
+    <div className="py-10 px-4 container mx-auto">
       {showHeading && (
         <h2 className="text-3xl font-bold text-center mb-12">
           {limit ? 'Featured Projects' : 'All Projects'}
@@ -90,6 +92,18 @@ const Projects = ({ limit, showHeading = true }: ProjectsProps) => {
         {displayedProjects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
+
+        {limit && (
+          <div className="col-span-full flex justify-center mt-4">
+            <Button
+              variant="outline"
+              asChild
+              className="hover:bg-primary hover:text-primary-foreground"
+            >
+              <Link to="/projects">View All Projects</Link>
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
