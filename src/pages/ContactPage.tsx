@@ -32,7 +32,7 @@ const ContactPage: React.FC = () => {
                 </svg>
                 <div>
                   <h3 className="font-bold">Email</h3>
-                  <p className="text-muted-foreground">yourname@example.com</p>
+                  <p className="text-muted-foreground">giri.debu@gmail.com</p>
                 </div>
               </div>
 
@@ -52,8 +52,8 @@ const ContactPage: React.FC = () => {
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
                 <div>
-                  <h3 className="font-bold">Location</h3>
-                  <p className="text-muted-foreground">Your City, Country</p>
+                  <h3 className="font-bold">Kolkata</h3>
+                  <p className="text-muted-foreground">India</p>
                 </div>
               </div>
 
@@ -61,7 +61,7 @@ const ContactPage: React.FC = () => {
                 <h3 className="font-bold mb-3">Social Profiles</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/dgiri"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary"
@@ -80,7 +80,7 @@ const ContactPage: React.FC = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://linkedin.com/in/debashis-giri"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary"

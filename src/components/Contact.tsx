@@ -15,7 +15,7 @@ const Contact = () => {
               name="name"
               type="text"
               className="w-full p-2 rounded-md border border-input bg-background"
-              placeholder="Your name"
+              placeholder="Debashis Giri"
               required
             />
           </div>
@@ -28,7 +28,7 @@ const Contact = () => {
               name="email"
               type="email"
               className="w-full p-2 rounded-md border border-input bg-background"
-              placeholder="your.email@example.com"
+              placeholder="giri.debu@gmail.com"
               required
             />
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../components/ui/button';
+import deblarge from '../assets/deblarge.png';
 
 const AboutPage: React.FC = () => {
   return (
@@ -9,11 +10,7 @@ const AboutPage: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="col-span-1">
-            <img
-              src="/api/placeholder/400/400"
-              alt="Profile"
-              className="rounded-lg shadow-md w-full"
-            />
+            <img src={deblarge} alt="Profile" className="rounded-lg shadow-md w-full" />
           </div>
           <div className="col-span-2 space-y-4">
             <h2 className="text-2xl font-bold">Your Name</h2>
