@@ -25,32 +25,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   projectUrl,
 }) => {
   return (
-    <Card className="overflow-hidden">
-      <div className="h-48 overflow-hidden">
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-full object-cover transition-all hover:scale-105"
-        />
+    <Card className="overflow-hidden transition-all duration-300 bg-card hover:scale-[1.01] hover:shadow-xl hover:border-primary/50 cursor-pointer">
+      <div className="h-52 overflow-hidden p-2">
+        <img src={imageUrl} alt={title} className="w-full h-full object-contain bg-muted/10" />
       </div>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription className="mt-2">
+        <CardDescription>
           {tags.map((tag) => (
             <span
               key={tag}
-              className="inline-block bg-muted text-muted-foreground rounded-full px-3 py-1 text-xs mr-2 mb-2"
+              className="inline-block bg-muted text-muted-foreground rounded-md px-3 py-1 text-xs mr-2 mb-2"
             >
               {tag}
             </span>
           ))}
         </CardDescription>
       </CardHeader>
-      <CardContent className="h-24 overflow-y-auto">
-        <p>{description}</p>
+      <CardContent className="h-24 overflow-y-auto custom-scrollbar">
+        <p className="text-muted-foreground">{description}</p>
       </CardContent>
       <CardFooter>
-        <Button asChild variant="secondary" className="w-full">
+        <Button
+          asChild
+          variant="secondary"
+          className="w-full hover:bg-primary hover:text-primary-foreground"
+        >
           <a href={projectUrl} target="_blank" rel="noopener noreferrer">
             View Project
           </a>

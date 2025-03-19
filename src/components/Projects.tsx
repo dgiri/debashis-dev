@@ -5,7 +5,12 @@ import tiatrosLtsImg from '@/assets/tiatros-lts.png';
 import tiatros1Img from '@/assets/tiatros-1.png';
 import solaroImg from '@/assets/solaro.png';
 
-const Projects = () => {
+interface ProjectsProps {
+  limit?: number;
+  showHeading?: boolean;
+}
+
+const Projects = ({ limit, showHeading = true }: ProjectsProps) => {
   const projects = [
     {
       title: 'Zapscale',
@@ -47,14 +52,14 @@ const Projects = () => {
       tags: ['Ruby', 'Rails', 'PostgreSQL', 'jQuery', 'Bootstrap', 'cucumber', 'rspec'],
       projectUrl: 'https://www.solaro.com/',
     },
-    // {
-    //   title: 'E-Commerce Platform',
-    //   description:
-    //     'A full-featured online shopping platform with customer authentication, product catalog, and payment integration.',
-    //   tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    //   imageUrl: '/api/placeholder/600/400', // Placeholder image
-    //   projectUrl: '#',
-    // },
+    {
+      title: 'E-Commerce Platform',
+      description:
+        'A full-featured online shopping platform with customer authentication, product catalog, and payment integration.',
+      tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      imageUrl: '/api/placeholder/600/400',
+      projectUrl: '#',
+    },
     // {
     //   title: 'Task Management App',
     //   description:
@@ -72,11 +77,17 @@ const Projects = () => {
     // },
   ];
 
+  const displayedProjects = limit ? projects.slice(0, limit) : projects;
+
   return (
     <div className="py-16 px-4 container mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+      {showHeading && (
+        <h2 className="text-3xl font-bold text-center mb-12">
+          {limit ? 'Featured Projects' : 'All Projects'}
+        </h2>
+      )}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
       </div>

@@ -43,9 +43,9 @@ export const Navbar = () => {
             <img
               src="./deb.png"
               alt="Deb Logo"
-              width={32}
-              height={32}
-              className="rounded-lg border-2 border-primary/20 hover:border-primary/50 hover:shadow-md transition-all duration-300 hover:scale-105"
+              width={40}
+              height={40}
+              className="rounded-lg border-2 border-primary/20 hover:border-primary/50 hover:shadow-md transition-all duration-300"
             />
           </Link>
         </div>

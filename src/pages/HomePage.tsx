@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <Hero />
-      <Projects />
+      <Projects limit={3} />
       <Skills />
       <Contact />
     </div>
