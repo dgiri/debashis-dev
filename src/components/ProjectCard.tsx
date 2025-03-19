@@ -35,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>
+        <CardDescription className="mt-2">
           {tags.map((tag) => (
             <span
               key={tag}
@@ -46,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           ))}
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="h-24 overflow-y-auto">
         <p>{description}</p>
       </CardContent>
       <CardFooter>

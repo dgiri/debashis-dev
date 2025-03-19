@@ -38,16 +38,20 @@ export const Navbar = () => {
   return (
     <div className="border-b">
       <div className="flex h-16 items-center px-4 container mx-auto">
+        <div className="mr-4">
+          <Link to="/" className="flex items-center">
+            <img
+              src="./deb.png"
+              alt="Deb Logo"
+              width={32}
+              height={32}
+              className="rounded-lg border-2 border-primary/20 hover:border-primary/50 hover:shadow-md transition-all duration-300 hover:scale-105"
+            />
+          </Link>
+        </div>
         <div className="mr-4 hidden md:flex">
           <NavigationMenu>
             <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link to="/" className={navigationMenuTriggerStyle()}>
-                    <img src="./deb.png" alt="Deb Logo" width={32} height={32} />
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link to="/" className={navigationMenuTriggerStyle()}>
