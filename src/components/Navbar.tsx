@@ -5,8 +5,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from '../components/ui/navigation-menu';
+import { navigationMenuTriggerStyle } from '../components/ui/navigation-menu-variants';
 
 const ListItem = ({
   href,
