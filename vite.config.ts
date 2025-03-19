@@ -20,4 +20,5 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, './src/utils'),
     },
   },
+  base: process.env.NODE_ENV === 'production' ? '/{debashis-dev}/' : '/',
 });
