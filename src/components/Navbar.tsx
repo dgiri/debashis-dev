@@ -44,7 +44,7 @@ export const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link to="/" className={navigationMenuTriggerStyle()}>
-                    <img src="/deb.png" alt="Deb Logo" width={32} height={32} />
+                    <img src="./deb.png" alt="Deb Logo" width={32} height={32} />
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
