@@ -1,5 +1,3 @@
-import { Button } from '../components/ui/button';
-
 const Hero = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-[50vh] px-4 text-center">

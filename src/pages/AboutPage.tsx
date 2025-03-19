@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from '../components/ui/button';
 import deblarge from '../assets/deblarge.png';
+import { Link } from 'react-router-dom';
+import resume from '../assets/resume.pdf';
 
 const AboutPage: React.FC = () => {
   return (
@@ -13,19 +15,23 @@ const AboutPage: React.FC = () => {
             <img src={deblarge} alt="Profile" className="rounded-lg shadow-md w-full" />
           </div>
           <div className="col-span-2 space-y-4">
-            <h2 className="text-2xl font-bold">Your Name</h2>
-            <p className="text-lg text-muted-foreground">Full-stack Developer based in Your City</p>
+            <h2 className="text-2xl font-bold">Debashis Giri</h2>
+            <p className="text-lg text-muted-foreground">
+              Full-stack Developer based in Kolkata, India
+            </p>
             <p>
-              I'm a passionate developer with over X years of experience building web and mobile
+              I'm a passionate developer with over 10+ years of experience building web and mobile
               applications. I specialize in creating clean, accessible, and user-friendly
               experiences.
             </p>
             <div className="flex space-x-4 pt-4">
               <Button asChild variant="outline">
-                <a href="/contact">Contact Me</a>
+                <Link to="/contact" replace>
+                  Contact Me
+                </Link>
               </Button>
               <Button asChild>
-                <a href="/files/resume.pdf" download>
+                <a href={resume} download>
                   Download Resume
                 </a>
               </Button>
